@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
@@ -7,13 +7,11 @@ android {
     compileSdk compile_sdk_version
 
     defaultConfig {
-        applicationId "com.android.linkjf.zemoparser"
         minSdk min_sdk_version
         targetSdk target_sdk_version
-        versionCode version_code
-        versionName version_name
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -33,12 +31,8 @@ android {
 
 dependencies {
 
-    implementation androidDependencies.values()
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation androidDependencies.coreKtx
 
     testImplementation testDependencies.jUnit
     androidTestImplementation testDependencies.androidTest
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
