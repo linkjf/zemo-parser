@@ -14,6 +14,13 @@ ext {
     core_ktx_version = '1.8.0'
     app_compat_version = '1.4.2'
     material_version = '1.6.1'
+    constraint_version = '2.1.4'
+
+    hilt_version = "2.41"
+
+    retrofit_version = '2.9.0'
+    ok_http_logging_interceptor_version = '4.9.3'
+    gson_converter_version = '2.9.0'
 
     //Testing
     junit_version = '4.13.2'
@@ -21,9 +28,21 @@ ext {
     android_test_espresso_version = '3.4.0'
 
     androidDependencies = [
-            coreKtx  : "androidx.core:core-ktx:$core_ktx_version",
-            appCompat: "androidx.appcompat:appcompat:$app_compat_version",
-            material : "com.google.android.material:material:$material_version"
+            coreKtx          : "androidx.core:core-ktx:$core_ktx_version",
+            appCompat        : "androidx.appcompat:appcompat:$app_compat_version",
+            material         : "com.google.android.material:material:$material_version",
+            constraintLaytout: "androidx.constraintlayout:constraintlayout:$constraint_version"
+    ]
+
+    hiltDependencies = [
+            hiltLib     : "com.google.dagger:hilt-android:$hilt_version",
+            hiltCompiler: "com.google.dagger:hilt-android-compiler:$hilt_version"
+    ]
+
+    retrofitDependencies = [
+            retrofit         : "com.squareup.retrofit2:retrofit:$retrofit_version",
+            okHttpInterceptor: "com.squareup.okhttp3:logging-interceptor:$ok_http_logging_interceptor_version",
+            gsonConverter    : "com.squareup.retrofit2:converter-gson:$gson_converter_version"
     ]
 
     testDependencies = [

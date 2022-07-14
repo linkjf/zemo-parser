@@ -32,6 +32,8 @@ android {
 dependencies {
 
     implementation androidDependencies.coreKtx
+    implementation hiltDependencies.values()
+    implementation retrofitDependencies.values()
 
     testImplementation testDependencies.jUnit
     androidTestImplementation testDependencies.androidTest
